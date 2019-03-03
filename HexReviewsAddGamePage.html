@@ -24,36 +24,163 @@
 
     </head>
     <body>
-        <!-- Top home page navigation bar. -->
+        <!-- Top add game page navigation bar. -->
         <nav class="navbar navbar-inverse navbar-static-top">
             <div class="container">
                 <div class="navbar-header">
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
                     <a class="navbar-brand" href="#">Hex Reviews</a>
                 </div>
             </div>
         </nav>
 
-        <div>
-            <h1 id="welcomeHeader"></h1>
-            <form>
-                <div class="form-group">
-                    <label for="game_title">Game Title</label>
+        <div class="page-header" style="width:40%; margin: 50px auto; text-align: center; ">
+            <h1>Add a New Game</h1>
+        </div>
+
+        <!-- All fields for adding in a new game. -->
+        <div style="width:40%; margin: 0 auto;">
+            <form class>
+                <div class="form-group form-group-lg">
+
+                    <label for="game_title">Title</label>
                     <input id="game_title" type="text" class="form-control">
+
+                    <label for="game_description">Description</label>
+                    <input id="game_description" type="text" class="form-control">
+
+                    <div style="width:70%;">
+                        <label for="game_genre_tags">Genres</label>
+                        <button id="gameGenreButton" type="button" class="btn" style="float: right">+</button>
+                        <input id="game_genre_tags" type="text" class="form-control">                        
+                    </div>
+
+                    <label for="game_developer">Developer</label>
+                    <input id="game_developer" type="text" class="form-control">
+
+                    <label for="game_publisher">Publisher</label>
+                    <input id="game_publisher" type="text" class="form-control">
+
+                    <div style="width:70%;">
+                        <label for="game_age_rating_tags">Age Rating</label>
+                        <button id="gameAgeRatingButton" type="button" class="btn" style="float: right">+</button>
+                        <input id="game_age_rating_tags" type="text" class="form-control">                                            
+                    </div>
+
+                    <label for="game_release_date">Release Date</label>
+                    <input id="game_release_date" type="date" class="form-control">
+
+                    <label for="onlineCheckbox">Online</label>
+                    <input type="checkbox" class="custom-control-input" id="onlineCheckbox">
+
+                    <div style="width:70%;">
+                        <label for="game_platform_tags">Platforms</label>
+                        <button id="gamePlatformsButton" type="button" class="btn" style="float: right">+</button>
+                        <input id="game_platform_tags" type="text" class="form-control">
+                    </div>
+
+                    <label for="game_launch_price">Price at Launch</label>
+                    <input id="game_launch_price" type="number" min="0.00" class="form-control">
                 </div>
             </form>
-            <button class="bigMainButton" onclick="addGame()">Add Game</button>
+            <div style="width:40%; margin: 0 auto;">
+                <button id="test" class="bigMainButton" onclick="addGame()">Add Game</button>
+            </div>
         </div>
 
 
         <nav class="navbar navbar-inverse navbar-fixed-bottom" id="homePageNavigationBarBottom">
             <!-- Bottom navigation bar content goes here. -->
         </nav>
-        
+
+        <!-- Modals -->
+        <!-- Genre tag selection modal. -->
+        <div id = "genreTagModal" class="modal" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title">Select Genres</h3>
+                </div>
+                <div class="modal-body">
+                    <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="actionCheckbox">
+                        <label class="custom-control-label" for="actionCheckbox">Action</label>
+
+                        <input type="checkbox" class="custom-control-input" id="adventureCheckbox">
+                        <label class="custom-control-label" for="adventureCheckbox">Adventure</label>
+
+                        <input type="checkbox" class="custom-control-input" id="survivalCheckbox">
+                        <label class="custom-control-label" for="survivalCheckbox">Survival</label>
+
+                        <input type="checkbox" class="custom-control-input" id="horrorCheckbox">
+                        <label class="custom-control-label" for="horrorCheckbox">Horror</label>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button id="submitGenresButton" type="button" class="btn btn-primary">Save changes</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Age rating tag selection modal. -->
+        <div id = "ageRatingTagModal" class="modal" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title">Select Age Restrictions</h3>
+                </div>
+                <div class="modal-body">
+                    <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="purchasesCheckbox">
+                        <label class="custom-control-label" for="purchasesCheckbox">Includes in-game purchases</label>
+                        <p></p>
+                        <input type="checkbox" class="custom-control-input" id="gamblingCheckbox">
+                        <label class="custom-control-label" for="gamblingCheckbox">May encourage gambling</label>
+                        <p></p>
+                        <input type="checkbox" class="custom-control-input" id="drugsCheckbox">
+                        <label class="custom-control-label" for="drugsCheckbox">May be frightening to children</label>
+                        <p></p>
+                        <input type="checkbox" class="custom-control-input" id="sexBox">
+                        <label class="custom-control-label" for="sexBox">Nudity or sexual behaviour</label>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button id="submitAgeRatingsButton" type="button" class="btn btn-primary">Save changes</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Platform tag selection modal. -->
+        <div id = "platformTagModal" class="modal" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title">Select Platforms</h3>
+                </div>
+                <div class="modal-body">
+                    <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="pcCheckbox">
+                        <label class="custom-control-label" for="purchasesCheckbox">PC</label>
+
+                        <input type="checkbox" class="custom-control-input" id="xboxCheckbox">
+                        <label class="custom-control-label" for="gamblingCheckbox">Xbox</label>
+
+                        <input type="checkbox" class="custom-control-input" id="playstationCheckbox">
+                        <label class="custom-control-label" for="drugsCheckbox">PlayStation</label>
+
+                        <input type="checkbox" class="custom-control-input" id="switchCheckbox">
+                        <label class="custom-control-label" for="sexBox">Switch</label>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button id="submitPlatformsButton" type="button" class="btn btn-primary">Save changes</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+                </div>
+            </div>
+        </div>
     </body>
 </html>

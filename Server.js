@@ -19,7 +19,6 @@ app.get("/HexReviewsAddGamePageLogic.js", function(req, res) {
     res.sendFile(__dirname + "/HexReviewsAddGamePageLogic.js");
 });
 
-
 // Listening for connectinos on appropriate port.
 server.listen(port, function(){
   console.log("Solar System Quiz server is listening on port: " + port + "...");
