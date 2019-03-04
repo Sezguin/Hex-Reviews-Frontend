@@ -3,6 +3,8 @@ var gameAgeRatings  = [];
 var gamePlatforms   = [];
 
 $(document).ready(function() {
+
+    //  All form related buttons.
     $("#gameGenreButton").click(function() {
         $('#genreTagModal').modal("show");
     });
@@ -26,6 +28,11 @@ $(document).ready(function() {
     $("#submitPlatformsButton").click(function() {
         submitPlatforms();
     });
+
+    //  All navigation related buttons.
+    $("#addGameButton").click(function() {
+        addGame();
+    });
 });
 
 function addGame() {
@@ -45,7 +52,7 @@ function addGame() {
         gameOnline = false;
     }
 
-    $.post( "http://localhost:4500/games/", 
+    $.post("http://localhost:4500/games/", 
     {   
         game_title: gameTitle,
         game_description: gameDesc,

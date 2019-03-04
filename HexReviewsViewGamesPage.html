@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+    <head>
+        <title>View Games</title>
+
+        <!-- JQuery dependencies. -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+        <!-- Bootstrap dependencies. -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+            crossorigin="anonymous">
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+            crossorigin="anonymous"></script>
+
+        <!-- Custom client dependencies. -->
+        <script src="Logic/CommonLogic.js"></script>
+        <script src="Logic/HexReviewsViewGamesPageLogic.js"></script>
+        <link rel="stylesheet" href="CSS/CommonStylesheet.css">
+        <link rel="stylesheet" href="CSS/HexReviewsViewGamesPageStylesheet.css">
+
+        <!-- Custom fonts. -->
+        <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+
+        <!-- Custom icons. -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+    </head>
+    <body>
+        <!-- Top add game page navigation bar. -->
+        <nav class="navbar navbar-inverse navbar-static-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#">Hex Reviews</a>
+                </div>
+            </div>
+        </nav>
+
+        <div class="page-header" style="width:40%; margin: 50px auto; text-align: center; ">
+            <h1>View Games</h1>
+        </div>
+        <div id="gameResultsContainer">
+            <div class="jumbotron gameJumbotron">
+                <h1 class="display-4">Hello, world!</h1>
+                <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+                <hr class="my-4">
+                <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+                <p class="lead">
+                    <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+                </p>
+            </div>
+
+        <div style="width:40%; margin: 0 auto;">
+            <button id="goToAddGamePageButton" class="bigMainButton">Add Game</button>
+        </div>
+    </body>
+</html>

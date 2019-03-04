@@ -1,0 +1,9 @@
+#gameResultsContainer {
+    /* text-align: center; */
+}
+.gameJumbotron {
+    width: 80%;
+    margin: 0 auto;
+    border-radius: 50px;
+    padding: 40px;
+}

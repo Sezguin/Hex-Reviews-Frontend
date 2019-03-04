@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
     <head>
-        <title id="pageTitle">Add Game</title>
+        <title>Add Game</title>
 
         <!-- JQuery dependencies. -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -13,8 +13,10 @@
             crossorigin="anonymous"></script>
 
         <!-- Custom client dependencies. -->
-        <script src="HexReviewsAddGamePageLogic.js"></script>
-        <link rel="stylesheet" href="HexReviewsAddGamePageStylesheet.css">
+        <script src="Logic/CommonLogic.js"></script>
+        <script src="Logic/HexReviewsAddGamePageLogic.js"></script>
+        <link rel="stylesheet" href="CSS/CommonStylesheet.css">
+        <link rel="stylesheet" href="CSS/HexReviewsAddGamePageStylesheet.css">
 
         <!-- Custom fonts. -->
         <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
@@ -83,7 +85,8 @@
                 </div>
             </form>
             <div style="width:40%; margin: 0 auto;">
-                <button id="test" class="bigMainButton" onclick="addGame()">Add Game</button>
+                <button id="addGameButton" class="bigMainButton">Add Game</button>
+                <button id="goToViewGamesPageButton" class="bigMainButton">View Games</button>
             </div>
         </div>
 
