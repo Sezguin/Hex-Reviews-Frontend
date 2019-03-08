@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
     <head>
-        <title>View Games</title>
+        <title>View A Game</title>
 
         <!-- JQuery dependencies. -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -14,9 +14,9 @@
 
         <!-- Custom client dependencies. -->
         <script src="Logic/CommonLogic.js"></script>
-        <script src="Logic/HexReviewsViewGamesPageLogic.js"></script>
+        <script src="Logic/HexReviewsViewSingleGamePageLogic.js"></script>
         <link rel="stylesheet" href="CSS/CommonStylesheet.css">
-        <link rel="stylesheet" href="CSS/HexReviewsViewGamesPageStylesheet.css">
+        <link rel="stylesheet" href="CSS/HexReviewsViewSingleGamePageStylesheet.css">
 
         <!-- Custom fonts. -->
         <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
@@ -36,15 +36,11 @@
         </nav>
 
         <div class="page-header" style="width:40%; margin: 50px auto; text-align: center; ">
-            <h1>View Games</h1>
+            <h1>View Game</h1>
         </div>
 
         <div id="gameResultsContainer">
-            <!-- All games from database will be added in here upon page load. -->
-        </div>
-
-        <div style="width:40%; margin: 0 auto;">
-            <button id="goToAddGamePageButton" class="bigMainButton">Add Game</button>
+            <!-- Full game information will be displayed here. -->
         </div>
     </body>
 </html>

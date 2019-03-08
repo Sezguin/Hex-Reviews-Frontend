@@ -1,33 +1,31 @@
-var gameList = null
-
 $(document).ready(function() {
-    getGameList();
 
-    $("#deleteButton").click(function() {
-        console.log("Delete game button clicked.");
-    });
+    var url_string = window.location.href;
+    var url = new URL(url_string);
+    var gameId = url.searchParams.get("id");
+
+
+    getGame(gameId);
 });
 
-function getGameList() {
-    $.get("http://localhost:4500/games/", function(data) {
-        Object.keys(data).forEach(function(k) {
-            console.log(JSON.stringify(data[k]));
-
-            buildGameCard(data[k]);
-        });
-    });    
+function getGame(gameId) {
+    $.ajax({
+        url: 'http://localhost:4500/games/' + gameId,
+        type: 'GET',
+        success: function(result) {
+            console.log("Information from API: " + JSON.stringify(result));
+            displayGame(result);
+        }
+    });
 }
 
-function buildGameCard(data) {
-    console.log("Game card is being created...");
-
-    var gameData = data;
+function displayGame(result) {
 
     //  Data collected from database split into individual values.
-    var gameId              = gameData._id
-    var gameTitle           = gameData.game_title;
-    var gameDescription     = gameData.game_description;
-    var gameGenres          = gameData.game_genre_tags;
+    var gameId              = result._id
+    var gameTitle           = result.game_title;
+    var gameDescription     = result.game_description;
+    var gameGenres          = result.game_genre_tags;
 
     //  Results container to add game entries to.
     var resultsContainer = document.getElementById("gameResultsContainer");
@@ -50,10 +48,6 @@ function buildGameCard(data) {
     var gameDescriptionElement = document.createElement("p");
     gameDescriptionElement.textContent = gameDescription;
 
-    //  Line separator.
-    var lineSeparator = document.createElement("hr");
-    lineSeparator.className = "my-4";
-
     //  Button area properties.
     var gameButtonSection = document.createElement("p");
     gameButtonSection.className = "lead";
@@ -65,30 +59,13 @@ function buildGameCard(data) {
     deleteButton.setAttribute("onclick", "deleteGame(this)");
     deleteButton.textContent = "Delete";
 
-    //  View game button properties.
-    var viewGameButton = document.createElement("a");
-    viewGameButton.className = "btn btn-primary btn-lg";
-    viewGameButton.id="viewGameButton";
-    viewGameButton.setAttribute("onclick", "viewGame(this)");
-    viewGameButton.textContent = "View";
-
     //  Configure game entry to be added.
     gameJumbotron.appendChild(gameIdElement);
     gameJumbotron.appendChild(gameTitleElement);
     gameJumbotron.appendChild(gameDescriptionElement);
     gameJumbotron.appendChild(gameButtonSection);
-    gameJumbotron.appendChild(lineSeparator);
     gameJumbotron.appendChild(deleteButton);
-    gameJumbotron.appendChild(viewGameButton);
-
 
     //  Add game entry to results container.
     resultsContainer.appendChild(gameJumbotron);
-
-}
-
-function viewGame(button) {
-    var id = button.parentNode.childNodes[0].innerHTML;
-
-    goToViewSingleGamePage(id);
 }

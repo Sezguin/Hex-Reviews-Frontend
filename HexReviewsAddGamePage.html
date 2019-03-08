@@ -40,56 +40,65 @@
         </div>
 
         <!-- All fields for adding in a new game. -->
-        <div style="width:40%; margin: 0 auto;">
+        <div>
             <form class>
-                <div class="form-group form-group-lg">
+                <div class="form-group form-group-lg addGameFormGroup">
 
-                    <label for="game_title">Title</label>
-                    <input id="game_title" type="text" class="form-control">
+                    <!-- Game Title -->
+                    <h4>Game Title</h4>
+                    <input id="game_title" type="text" class="form-control" placeholder="..." required>
 
-                    <label for="game_description">Description</label>
-                    <input id="game_description" type="text" class="form-control">
+                    <h4>Description</h4>
+                    <input id="game_description" type="text" class="form-control" placeholder="...">
 
-                    <div style="width:70%;">
-                        <label for="game_genre_tags">Genres</label>
-                        <button id="gameGenreButton" type="button" class="btn" style="float: right">+</button>
-                        <input id="game_genre_tags" type="text" class="form-control">                        
+                    <h4>Genres</h4>
+                    <div class="input-group input-group-lg">
+                        <input id="game_genre_tags" type="text" class="form-control" placeholder="...">
+                            <span class="input-group-btn">
+                                <button id="gameGenreButton" class="btn btn-primary" type="button"><span aria-hidden="true">
+                            </span> Add</button>
+                        </span>
                     </div>
 
-                    <label for="game_developer">Developer</label>
+                    <h4>Developer</h4>
                     <input id="game_developer" type="text" class="form-control">
 
-                    <label for="game_publisher">Publisher</label>
+                    <h4>Publisher</h4>
                     <input id="game_publisher" type="text" class="form-control">
 
-                    <div style="width:70%;">
-                        <label for="game_age_rating_tags">Age Rating</label>
-                        <button id="gameAgeRatingButton" type="button" class="btn" style="float: right">+</button>
-                        <input id="game_age_rating_tags" type="text" class="form-control">                                            
+                    <h4>Age Rating</h4>
+                    <div class="input-group input-group-lg">
+                        <input id="game_age_rating_tags" type="text" class="form-control" placeholder="...">
+                            <span class="input-group-btn">
+                                <button id="gameAgeRatingButton" class="btn btn-primary" type="button"><span aria-hidden="true">
+                            </span> Add</button>
+                        </span>
                     </div>
 
-                    <label for="game_release_date">Release Date</label>
+                    <h4>Release Date</h4>
                     <input id="game_release_date" type="date" class="form-control">
 
-                    <label for="onlineCheckbox">Online</label>
+                    <h4>Mulitplayer Capability</h4>
                     <input type="checkbox" class="custom-control-input" id="onlineCheckbox">
 
-                    <div style="width:70%;">
-                        <label for="game_platform_tags">Platforms</label>
-                        <button id="gamePlatformsButton" type="button" class="btn" style="float: right">+</button>
-                        <input id="game_platform_tags" type="text" class="form-control">
+                    <h4>Age Rating</h4>
+                    <div class="input-group input-group-lg">
+                        <input id="game_platform_tags" type="text" class="form-control" placeholder="...">
+                            <span class="input-group-btn">
+                                <button id="gamePlatformsButton" class="btn btn-primary" type="button"><span aria-hidden="true">
+                            </span> Add</button>
+                        </span>
                     </div>
 
-                    <label for="game_launch_price">Price at Launch</label>
+                    <h4>Launch Price</h4>
                     <input id="game_launch_price" type="number" min="0.00" class="form-control">
+
+                    <button id="addGameButton" class="bigMainButton" type="submit">Add Game</button>
+                    <button id="goToViewGamesPageButton" class="bigMainButton">View Games</button>
+
                 </div>
             </form>
-            <div style="width:40%; margin: 0 auto;">
-                <button id="addGameButton" class="bigMainButton">Add Game</button>
-                <button id="goToViewGamesPageButton" class="bigMainButton">View Games</button>
-            </div>
         </div>
-
 
         <nav class="navbar navbar-inverse navbar-fixed-bottom" id="homePageNavigationBarBottom">
             <!-- Bottom navigation bar content goes here. -->
