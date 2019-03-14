@@ -52,6 +52,7 @@ function addGame() {
         gameOnline = false;
     }
 
+    //  Post collected information to API.
     $.post("http://localhost:4500/games/", 
     {   
         game_title: gameTitle,

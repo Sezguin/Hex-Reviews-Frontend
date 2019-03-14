@@ -1,0 +1,27 @@
+{
+  "name": "hex-reviews-frontend",
+  "version": "1.0.0",
+  "description": "Hex Reviews front-end.",
+  "main": "Server.js",
+  "dependencies": {
+    "express": "^4.16.4",
+    "node": "^10.15.2",
+    "nodemon": "^1.18.10"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node Server.js",
+    "dev": "nodemon Server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sezguin/Hex-Reviews-Frontend.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Sezguin/Hex-Reviews-Frontend/issues"
+  },
+  "homepage": "https://github.com/Sezguin/Hex-Reviews-Frontend#readme"
+}

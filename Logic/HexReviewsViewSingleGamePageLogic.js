@@ -48,6 +48,10 @@ function displayGame(result) {
     var gameDescriptionElement = document.createElement("p");
     gameDescriptionElement.textContent = gameDescription;
 
+    //  Game genre tags.
+    var gameGenreTagsElement = document.createElement("p");
+    gameGenreTagsElement.textContent = gameGenres;
+
     //  Button area properties.
     var gameButtonSection = document.createElement("p");
     gameButtonSection.className = "lead";
@@ -63,6 +67,7 @@ function displayGame(result) {
     gameJumbotron.appendChild(gameIdElement);
     gameJumbotron.appendChild(gameTitleElement);
     gameJumbotron.appendChild(gameDescriptionElement);
+    gameJumbotron.appendChild(gameGenreTagsElement);
     gameJumbotron.appendChild(gameButtonSection);
     gameJumbotron.appendChild(deleteButton);
 

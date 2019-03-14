@@ -3,26 +3,19 @@
     <head>
         <title>Add Game</title>
 
-        <!-- JQuery dependencies. -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+            <!-- All stylesheets and UI material. -->
 
-        <!-- Bootstrap dependencies. -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
-            crossorigin="anonymous">
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
-            crossorigin="anonymous"></script>
+        <!-- Bootstrap Stylesheet dependencies. -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">        
+        <link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet">
 
-        <!-- Custom client dependencies. -->
-        <script src="Logic/CommonLogic.js"></script>
-        <script src="Logic/HexReviewsAddGamePageLogic.js"></script>
+        <!-- Custom client stylesheets. -->
         <link rel="stylesheet" href="CSS/CommonStylesheet.css">
         <link rel="stylesheet" href="CSS/HexReviewsAddGamePageStylesheet.css">
 
-        <!-- Custom fonts. -->
-        <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
-
-        <!-- Custom icons. -->
+        <!-- Custom icons and fonts. -->
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>      
 
     </head>
     <body>
@@ -40,7 +33,7 @@
         </div>
 
         <!-- All fields for adding in a new game. -->
-        <div>
+        <div id="addNewGameArea">
             <form class>
                 <div class="form-group form-group-lg addGameFormGroup">
 
@@ -61,10 +54,10 @@
                     </div>
 
                     <h4>Developer</h4>
-                    <input id="game_developer" type="text" class="form-control">
+                    <input id="game_developer" type="text" class="form-control" placeholder="...">
 
                     <h4>Publisher</h4>
-                    <input id="game_publisher" type="text" class="form-control">
+                    <input id="game_publisher" type="text" class="form-control" placeholder="...">
 
                     <h4>Age Rating</h4>
                     <div class="input-group input-group-lg">
@@ -76,10 +69,12 @@
                     </div>
 
                     <h4>Release Date</h4>
-                    <input id="game_release_date" type="date" class="form-control">
+                    <input id="game_release_date" type="date" class="form-control" placeholder="...">
 
                     <h4>Mulitplayer Capability</h4>
-                    <input type="checkbox" class="custom-control-input" id="onlineCheckbox">
+                    <label>
+                        <input id="onlineCheckbox" type="checkbox" checked data-toggle="toggle" data-on="Yes" data-off="No">
+                    </label>
 
                     <h4>Age Rating</h4>
                     <div class="input-group input-group-lg">
@@ -91,7 +86,7 @@
                     </div>
 
                     <h4>Launch Price</h4>
-                    <input id="game_launch_price" type="number" min="0.00" class="form-control">
+                    <input id="game_launch_price" type="number" min="0.00" class="form-control" placeholder="...">
 
                     <button id="addGameButton" class="bigMainButton" type="submit">Add Game</button>
                     <button id="goToViewGamesPageButton" class="bigMainButton">View Games</button>
@@ -194,5 +189,21 @@
                 </div>
             </div>
         </div>
+
+            <!-- All JavaScript material. -->
+
+        <!-- JQuery JavaScript dependencies. -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+        <!-- Boostrap JavaScript Dependencies. -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        <script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
+    
+        <!-- Custom client JavaScript -->
+        <script src="Logic/CommonLogic.js"></script>
+        <script src="Logic/HexReviewsAddGamePageLogic.js"></script>
+
     </body>
 </html>

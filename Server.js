@@ -15,7 +15,9 @@ app.get("/ViewSingleGamePage", function(req, res) {
     res.sendFile(__dirname + "/HexReviewsViewSingleGamePage.html");
 });
 
-// Adding all CSS files.
+    /* Adding all CSS files. */
+
+//  Local CSS
 app.get("/CSS/CommonStylesheet.css", function(req, res) {
     res.sendFile(__dirname + "/CSS/CommonStylesheet.css");
 });
@@ -32,7 +34,9 @@ app.get("/CSS/HexReviewsViewSingleGamePageStylesheet.css", function(req, res) {
     res.sendFile(__dirname + "/CSS/HexReviewsViewSingleGamePageStylesheet.css");
 });
 
-// Adding all JavaScript files.
+    /* Adding all JavaScript files. */
+
+// Local JavaScript
 app.get("/Logic/CommonLogic.js", function(req, res) {
     res.sendFile(__dirname + "/Logic/CommonLogic.js");
 });
@@ -51,5 +55,5 @@ app.get("/Logic/HexReviewsViewSingleGamePageLogic.js", function(req, res) {
 
 // Listening for connectinos on appropriate port.
 server.listen(port, function(){
-  console.log("Solar System Quiz server is listening on port: " + port + "...");
+  console.log("Hex Reviews front-end server is listening on port: " + port + "...");
 });
